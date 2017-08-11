@@ -1,84 +1,59 @@
 <!DOCTYPE html>
 <!-- VAZA DAQUI MULEKE, TU NAO TINHA NADA QUE TÁ AQUI EMBUSTE, SAI -->
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>Gemidão Free</title>
-    </head>
-    <style type="text/css">
-    body {
-        font-family: monospace;
-        background-color: #ECF0F1;
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Gemidão do Zap Free</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+</head>
 
-    }
-    input {
-        display: block;
-        width: 300px;
-        padding: 5px;
-        margin: 5px;
-        border: 1px solid silver;
-    }
-
-    button {
-        display: block;
-        margin: 5px;
-        padding: 5px;
-        width: 312px;
-        border: 1px solid white;
-        background-color: #3498DB;
-        color: white;
-        font-weight: bold;
-        cursor: pointer;
-    }
-
-    button:hover {
-        background-color: #3EDC81;
-    }
-
-    .title {
-        font-size: 22px;
-        margin: 20px;
-    }
-
-    .description {
-        margin-bottom: 50px;
-    }
-
-    </style>
-    <body>
-        <div align="center">
-            <div class="title">Gemidão do Zap</div>
-            <div class="description">
-                <div>Envie gratuitamente o gemidão do zap por ligação para seus "amigos" rsrsrs</div>
-                <div>PS: essa versão não precisa de token</div>
-            </div>
-            <input type="text" placeholder="Número que vai ligar" />
-            <input type="text" placeholder="Número que vai receber" />
-            <button id="send" onclick="send()">Enviar</button>
+<body>
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <h1>Gemidão do Zap</h1>
+        <p>Envie gratuitamente o gemidão do zap por ligação para seus "amigos" rsrsrs</p>
+        <hr>
+      </div>
+      <div class="col-md-4 ml-auto mr-auto">
+        <div class="form-group">
+          <label for="from">Número que vai ligar</label>
+          <input type="number" class="form-control" id="from" placeholder="22 22222 2222">
+          <small id="emailHelp" class="form-text text-muted">Digite apenas números.</small>
         </div>
-        <div id="result">
-
+        <div class="form-group">
+          <label for="to">Número que vai receber</label>
+          <input type="number" class="form-control" id="to" placeholder="22 22222 2222">
+          <small id="emailHelp" class="form-text text-muted">Digite apenas números.</small>
         </div>
-    </body>
-    <script type="text/javascript">
-    function send() {
-        /**
-VAMOS PARAR DE FUÇAR NO CODIGO DOS AMIGUINHOS?
-OBRIGADO
-*/
-        var container = document.createElement('div');
-        container.align = 'center';
-        var result = document.getElementById('result');
-        var audio = document.createElement('audio');
-        audio.autoplay = true;
-        var source = document.createElement('source');
-        source.type = 'audio/mpeg';
-        source.src = 'http://prtnsrc.com/2545.mp3';
-        var message = document.createTextNode('Pra você aprender a parar de ser filha da puta com os amiguinho');
-        audio.appendChild(source);
-        container.appendChild(audio);
-        container.appendChild(message);
-        result.appendChild(container);
-    }
-    </script>
+        <button class="btn btn-primary btn-block" style="coursor: pointer" id="send" onclick="send()">Enviar</button>
+      </div>
+    </div>
+  </div>
+  <div id="result" class="lead mt-5 text-danger text-uppercase">
+  </div>
+</body>
+<script type="text/javascript">
+function send() {
+  /**
+   * VAMOS PARAR DE FUÇAR NO CODIGO DOS AMIGUINHOS?
+   * OBRIGADO
+   */
+  var container = document.createElement('div');
+  container.align = 'center';
+  var result = document.getElementById('result');
+  var audio = document.createElement('audio');
+  // audio.autoplay = true;
+  audio.play();
+  var source = document.createElement('source');
+  source.type = 'audio/mpeg';
+  source.src = 'gemidao.mp3';
+  var message = document.createTextNode('Pra você aprender a parar de ser filha da puta com os amiguinho');
+  audio.appendChild(source);
+  container.appendChild(audio);
+  container.appendChild(message);
+  result.appendChild(container);
+}
+</script>
 </html>
