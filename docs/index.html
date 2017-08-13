@@ -24,7 +24,7 @@
         </div>
         <div class="form-group">
           <label for="to">Número que vai receber</label>
-          <input type="number" class="form-control" id="to" placeholder="22 22222 2222">
+          <input type="number" onkeydown="if(event.keyCode == 13 || event.keyCode == 9)document.getElementById('send').click()" class="form-control" id="to" placeholder="22 22222 2222">
           <small id="emailHelp" class="form-text text-muted">Digite apenas números.</small>
         </div>
         <button class="btn btn-primary btn-block" style="coursor: pointer" id="send" onclick="send()">Enviar</button>
