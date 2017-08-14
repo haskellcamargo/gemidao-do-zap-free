@@ -31,7 +31,14 @@
       </div>
     </div>
   </div>
-  <div id="result" class="lead mt-5 text-danger text-uppercase">
+  <div id="result" class="lead m-5 text-danger text-uppercase">
+  </div>
+  <div>
+    <ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-6934296242213124"
+     data-ad-slot="2499572193"
+     data-ad-format="auto"></ins>
   </div>
 </body>
 <script type="text/javascript">
@@ -45,7 +52,7 @@ function send() {
   var result = document.getElementById('result');
   var audio = document.createElement('audio');
   // audio.autoplay = true;
-  audio.play();
+  audio.play(); // @jaonoctus esteve aqui 😈
   var source = document.createElement('source');
   source.type = 'audio/mpeg';
   source.src = 'gemidao.mp3';
@@ -55,5 +62,21 @@ function send() {
   container.appendChild(message);
   result.appendChild(container);
 }
+</script>
+<!-- adsense -->
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<!-- analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-104485417-1', 'auto');
+  ga('send', 'pageview');
+
 </script>
 </html>
